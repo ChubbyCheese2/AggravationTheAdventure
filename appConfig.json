@@ -1,0 +1,18 @@
+{
+    "Jobs": [
+        {
+            "TimeDelay": 10,
+            "ApplicationPath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+            "Parameters": [
+                "https://youtu.be/dQw4w9WgXcQ"
+            ]
+        },
+        {
+            "TimeDelay": 10,
+            "ApplicationPath": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+            "Parameters": [
+                "https://youtu.be/dQw4w9WgXcQ"
+            ]
+        }
+    ]
+}

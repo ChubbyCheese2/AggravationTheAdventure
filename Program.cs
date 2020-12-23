@@ -1,9 +1,8 @@
-﻿using System.Diagnostics;
-using System.IO;
+﻿using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace RickRoll
+namespace Aggravation
 {
     class Program
     {

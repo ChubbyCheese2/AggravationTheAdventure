@@ -2,8 +2,9 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Aggravation.Models;
 
-namespace Aggravation
+namespace Aggravation.Services
 {
     public static class Astley
     {

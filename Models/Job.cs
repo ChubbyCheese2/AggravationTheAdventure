@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Aggravation
+namespace Aggravation.Models
 {
     public class Job
     {

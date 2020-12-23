@@ -19,7 +19,7 @@ namespace Aggravation
 
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
-            var path = $"{ Directory.GetCurrentDirectory() }\\appConfig.json";
+            var path = $"{ Directory.GetCurrentDirectory() }\\appSettings.json";
             var configText = File.ReadAllText(path);
             var config = JsonConvert.DeserializeObject<Config>(configText);
 

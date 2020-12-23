@@ -13,4 +13,11 @@
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0-dev-00905" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="appSettings.json" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Scripts\install.ps1" CopyToOutputDirectory="Always" />
+  </ItemGroup>
 </Project>

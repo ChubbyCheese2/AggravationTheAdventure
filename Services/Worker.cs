@@ -25,7 +25,6 @@ namespace Aggravation.Services
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(10000, stoppingToken);
                 foreach (var job in _config.Jobs)
                 {
                     await RunJob(job);
@@ -41,7 +40,10 @@ namespace Aggravation.Services
             {
                 parameters = string.Join(' ', job.Parameters);
             }
-            Process.Start(job.ApplicationPath, parameters);
+            if (!string.IsNullOrEmpty(job.ApplicationPath))
+            {
+                Process.Start(job.ApplicationPath, parameters);
+            }
         }
     }
 }

@@ -24,11 +24,14 @@ namespace Aggravation
             var config = JsonConvert.DeserializeObject<Config>(configText);
 
             Log.Logger =  new LoggerConfiguration()
-                                .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+                                .WriteTo.File("Logs\\log.txt", rollingInterval: RollingInterval.Day)
                                 .CreateLogger();
+
+
             return Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
+                    services.AddSingleton<Config>(config);
                     services.AddHostedService<Worker>();
                 })
                 .ConfigureLogging((hostContext, logging) =>
